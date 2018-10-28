@@ -1,0 +1,144 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.4, 27 July 2018) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you want to use \orcid or the
+%% academicons icons, add "academicons"
+%% to the \documentclass options.
+%% Then compile with XeLaTeX or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%% When using the "academicons" option,
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font %% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1cm,bottom=1cm}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{VividBlue}{HTML}{3E0097}
+\definecolor{Black}{HTML}{2E2E2E}
+\definecolor{Black}{HTML}{666666}
+\colorlet{heading}{VividBlue}
+\colorlet{accent}{VividBlue}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Rajan Sanghavi}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+\photo{2.5cm}{1.jpg}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{rsanghavi0804@gmail.com}
+  \phone{469-664-8153}
+  \mailaddress{Address, 7421 Frankford Road, Apt 837}
+  \location{Dallas, TX}
+  \linkedin{www.linkedin.com/in/rajansanghavi0804}
+  \github{https://github.com/rajansanghavi} % I'm just making this up though.
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{Experience}
+
+\cvevent{Application Development Analyst }{Accenture Solutions Private Limited}{October 2016 -- September 2017}{Mumbai, India}
+\begin{itemize}
+\item Predict bonus reports for American Express credit card, create optimum budgets, freeing or shoring up funds by 10-35\%.
+\item Create Tableau Dashboards to identify recurring problems in promotions, decreasing incident counts by 28\% over the span of 6 months.
+\item Automate Customer Transaction Retrieval, to bring work around time from 3 to 1 days. Train and manage 7 new joiner in Automation, SLA and RCA.
+\end{itemize}
+
+\divider
+
+\cvevent{Associate Software Engineer}{Accenture Solutions Private Limited}{June 2015 – October 2016}{Mumbai, India}
+\begin{itemize}
+\item Translated business rules of eligible customer spend and developed up to 30 mainframe jobs for transaction analysis.
+\item Planned and executed strategies to solve up to 60 incidents. Created COBOL modules to bring down incident resolution time from 3 weeks to 4 days.
+\item Hosted CAB Meetings for Amex and Accenture teams globally for 30 weeks .
+\end{itemize}
+
+\cvsection[page2sidebar]{Projects}
+
+\nocite{*}
+
+
+\cveventi{Maxwell House Coffee Marketing }{SAS, R, Tableau, Advanced Excel, Conjoint Analysis, Multinomial Logistic Regression, Survival Analysis, Clustering, Customer Analytics   }
+\begin{itemize}
+\item Scanner data of 600K Transaction, 12k Household data for 52 weeks.
+\item Estimated Price range with weighted average Promotion for every identified cluster based on household characteristics.
+\end{itemize}
+
+\cveventi{Cardiac Arrhythmia Detection}{Python Scikit-learn, numpy, pandas, KNN, Logistic Regression, SVC with Kernels, RandomForest, test statistics-AUC, Sensitivity}
+\begin{itemize}
+\item Multiclass Classification with 452 records and 280 feaures.
+\item SVC with RBF Kernel provides accuracy of 70.5\%, but sensitivity of 58\%.
+\item Mitigated Class imbalance by using Hierarchical RF followed by SVC with RBF, which provides 81\% and 72\% Accuracy at each stage.
+\end{itemize}
+
+\cveventi{Detergent Sales Warehousing}{MySQL, Tableau, SAP BOBJ, Kimball Methodologies, Python}
+\begin{itemize}
+\item Created 3NF Model for OLTP, Dimensional model for Sales DW and a Semantic layer using SAS BOBJ for Business Users .
+\item Generated Tableau Dashboard for interactive adhoc visualization and Web Intelligence report for publishing Scheduled reports.
+\end{itemize}
+
+\cveventi{Movie Recommendation}{Scikit-learn, Seaborn, matplotlib, pandas, numpy, Surprise}
+\begin{itemize}
+\item Set up a system based on the average number of votes and rating and expanded it to a content-based recommendation.
+\item Implemented a collaborative filtering based algorithm for higher user based personalization, and finally created a hybrid recommendation by combining all the above-used methods.
+
+\end{itemize}
+
+\clearpage
+
+\end{document}
